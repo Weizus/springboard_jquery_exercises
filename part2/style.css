@@ -1,0 +1,30 @@
+form {
+    display: table;
+}
+
+form div {
+    display: table-row;
+}
+
+form label,
+input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 8px 10px;
+}
+/* form label { 
+    padding-right: 10px;
+} */
