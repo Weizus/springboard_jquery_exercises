@@ -12,8 +12,11 @@ function submissionHandler() {
     if ($('#tableDiv').children().length == 0) {
         makeTable();
     }
-    // Make new list element with values
-
+    // Make new table elements with values
+    let newTr = $('<tr>');
+    newTr.appendTo('#tableDiv > table > tbody');
+    $(`<td scope = "col">${inputs[0].value}</td>`).appendTo(newTr);
+    $(`<td scope = "col">${inputs[1].value} Stars</td>`).appendTo(newTr);
 }
 
 function makeTable() {
@@ -22,8 +25,16 @@ function makeTable() {
     // makes table head
     $('<thead>').appendTo('#tableDiv > table');
     $('<tr>').appendTo('#tableDiv > table > thead');
+    // Fill table head
     let nth = $('<th>').attr('scope', 'col').text('movies');
     nth.appendTo('#tableDiv > table > thead > tr');
     nth = $('<th>').attr('scope', 'col').text('rating');
     nth.appendTo('#tableDiv > table > thead > tr');
+
+    // makes table body
+    $('<tbody>').appendTo('#tableDiv > table');    
+}
+
+function addToTable() {
+
 }
